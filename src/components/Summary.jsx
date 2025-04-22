@@ -2,6 +2,12 @@ import React from "react";
 import quizCompleteImage from "../assets/quiz-complete.png";
 import QUESTIONS from "../questions.js";
 
+/**
+ * A component that displays a summary of the user's answers.
+ * @param {object} props The component props.
+ * @param {array} props.userAnswers An array of user answers.
+ * @returns {ReactElement} The summary component.
+ */
 const Summary = ({ userAnswers }) => {
   const skippedAnswers = userAnswers.filter((answer) => answer === null);
   const correctAnswers = userAnswers.filter(
